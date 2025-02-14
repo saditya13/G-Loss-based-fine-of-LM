@@ -1,12 +1,17 @@
-# G-Loss-based-fine-of-LM
+# G-Loss: Graph-Driven-Fine-tuning-LM
 This repo contains code for [link to paper]
 
 ## Introduction
 
-Fine-tuning pre-trained language models like *SBERT* often relies on instance or pair-wise loss functions, which fail to capture global semantic relationships and incur high computational costs.
-We propose *G-Loss*, a graph-driven loss function computed using label propagation, capturing holistic semantic relationships leading to better embedding alignment. 
-We evaluate *G-Loss* on five datasets: MR for sentiment classification, R8 and R52 for topic classification, _Ohsumed_ for medical document classification, and 20NG for news categorization.
-*G-Loss* enabled *SBERT* outclassed or closely matched the performance of TextGCN, BertGCN-BERT, and BertGCN-RoBERTa.
+Fine-tuning pre-trained language models like *SBERT* often relies on instance- or pair-wise loss functions, which fail to capture global semantic relationships and incur high computational costs.
+
+We propose **G-Loss**, a graph-driven loss function computed using label propagation, capturing holistic semantic relationships leading to better embedding alignment. 
+
+We evaluate **G-Loss** on five datasets: MR for sentiment classification, R8 and R52 for topic classification, *Ohsumed* for medical document classification, and 20NG for news categorization.
+
+**G-Loss** enabled *SBERT* to outclass or closely match the performance of *TextGCN*, *BertGCN-BERT*, and *BertGCN-RoBERTa*.
+
+<br>
 
 To compute *G-Loss*:
 * Embedding Extraction: Embed the input data using the specified language model.
