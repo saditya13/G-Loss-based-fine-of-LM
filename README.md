@@ -49,13 +49,12 @@ In this work, we propose a graph-based loss function for fine-tuning language mo
 
 This project requires the following Python packages:
 
-*   `torch >= 2.5.1`
-*   `optuna >= 4.0.0`
-*   `pandas >= 2.2.3`
-*   `scikit-learn >= 1.3.2`
-*   `matplotlib >= 3.10.0`
-*   `transformers >= 4.48.2`
-*   `sentence-transformers >= 3.3.1`
+*   `torch == 2.5.1`
+*   `optuna == 4.0.0`
+*   `pandas == 2.2.3`
+*   `scikit-learn == 1.3.2`
+*   `transformers == 4.48.2`
+*   `sentence-transformers == 3.3.1`
 
 You can install these packages using pip:
 
