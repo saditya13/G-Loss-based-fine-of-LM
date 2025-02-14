@@ -2,7 +2,21 @@
 This repo contains code for [link to paper]
 
 ## Introduction
-In this work, we propose a graph-based loss function for fine-tuning language models.
+
+Fine-tuning pre-trained language models like *SBERT* often relies on instance or pair-wise loss functions, which fail to capture global semantic relationships and incur high computational costs.
+We propose *G-Loss*, a graph-driven loss function computed using label propagation, capturing holistic semantic relationships leading to better embedding alignment. 
+We evaluate *G-Loss* on five datasets: MR for sentiment classification, R8 and R52 for topic classification, _Ohsumed_ for medical document classification, and 20NG for news categorization.
+*G-Loss* enabled *SBERT* outclassed or closely matched the performance of TextGCN, BertGCN-BERT, and BertGCN-RoBERTa.
+
+To compute *G-Loss*:
+* Embedding Extraction: Embed the input data using the specified language model.
+* Similarity Graph Construction: Construct a graph based on the similarity of embeddings within a mini-batch.
+* Label Masking: Mask a subset of node labels for _Label Propagation_.
+* Iterative Label Propagation (LPA): Perform iterative label propagation to infer labels for the masked nodes.
+* Loss Computation: Calculate the cross-entropy loss between the LPA-predicted labels and the ground truth labels of the masked nodes.
+
+The computed loss is propagated to the language model, which then updates itself.
+A key feature of this approach is that the graph evolves dynamically over fine-tuning epochs, improving semantic representation as embeddings become more refined.
 
 ## Main results of paper
 
