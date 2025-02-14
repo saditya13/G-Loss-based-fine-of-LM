@@ -7,9 +7,45 @@ In this work, we propose a graph-based loss function for fine-tuning language mo
 ## Main results of paper
 
 ## Dependencies
-Environment (create environment using requirements file)
 
-# Library Packages
+### Prerequisites
+
+*   Python 3.9+ (Recommended)
+
+### Setting up the Environment
+
+1.  **Create a virtual environment:**
+
+    *   **Using conda (Recommended):**
+
+        ```bash
+        conda create -n my_env python=3.10
+        conda activate my_env
+        ```
+
+    *   **Using venv (Built-in to Python):**
+
+        ```bash
+        python3 -m venv my_env  # Or python -m venv my_env depending on your setup
+        source my_env/bin/activate  # On Windows: my_env\Scripts\activate
+        ```
+
+    *   **Using virtualenv (If you prefer this):**
+
+        ```bash
+        pip install virtualenv
+        virtualenv my_env
+        source my_env/bin/activate  # On Windows: my_env\Scripts\activate
+        ```
+
+2.  **Install the required packages:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+
+### Library Packages
 
 This project requires the following Python packages:
 
